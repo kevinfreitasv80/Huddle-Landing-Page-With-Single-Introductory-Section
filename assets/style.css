@@ -1,0 +1,148 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+:root{
+    --color1: #fff;
+}
+html, body, h1{
+    margin: 0;
+}
+body{
+    font-family: "Open Sans", sans-serif;
+}
+html, body{
+    padding: 0;
+    color: white;
+}
+body{
+    background: url(../images/bg-desktop.svg) hsl(257, 40%, 49%);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+main{
+    margin: 3em 0 0 5em;
+}
+
+h1, button{
+    font-family: "Poppins", sans-serif;
+}
+h1{
+    font-size: 2.5em;
+    max-width: 12em;
+}
+p{
+    line-height: 1.5em;
+    letter-spacing: .02em;
+    max-width: 30em;
+    color: hsl(0, 0%, 87%);
+}
+button{
+    cursor: pointer;
+    background: white;
+    border: none;
+    padding: .9em 3.5em;
+    border-radius: 2em;
+    font-size: 1.1em;
+    color: hsl(257, 40%, 49%);
+    box-shadow: .2em .2em 5px 2px rgba(0, 0, 0, 0.24);
+}
+button:hover{
+    color: white;
+    background: #E980E7;
+}
+
+.logo{
+    width: 13.5em;
+    margin-bottom: 5em;
+}
+.infor{
+    margin-left: 4em;
+}
+.principal, .media, .logo{
+    display: flex;
+}
+.principal article:last-child{
+    margin-top: 3em;
+}
+.media article{
+    width: 2em;
+    height: 2em;
+    border: 1px solid white;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.media article:hover{
+    border-color: hsl(300, 69%, 71%);
+}
+.media article:hover i{
+    color: hsl(300, 69%, 71%);
+}
+.media article:not(:last-child){
+    margin-right: 1em;
+}
+.media article:hover, .media article:hover i, button:hover{
+    transition: .3s;
+}
+.face{
+    margin-left: .65em;
+}
+.twit{
+    margin-left: .5em;
+}
+.insta{
+    margin-left: .55em;
+}
+.face, .twit, .insta{
+    transform: translateY(30%);
+}
+
+.media{
+    margin-top: 2em;
+    margin-right: 5em;
+    justify-content: end;
+}
+
+@media (max-width: 1280px) {
+    p{
+        max-width: 90%;
+    }
+}
+@media (max-width: 1190px) {
+    body{
+        background: url(../images/bg-mobile.svg) hsl(257, 40%, 49%);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    h1{
+        margin: auto;
+    }
+    .infor, main{
+        text-align: center;
+    }
+    .infor, main, .media i{
+        margin: 0;
+    }
+    .principal{
+        text-align: center;
+        display: block;
+    }
+    p{
+        margin: 1em auto;
+        max-width: 19.75em;
+    }
+    button{
+        padding: .5em 4em;
+    }
+    .media{
+        margin: 5em 0 2em;
+        justify-content: center;
+    }
+    .logo{
+        margin-top: 2.5em;
+        margin-left: 5em;
+    }
+}
+@media (max-width: 750px) {
+    .logo{
+        transform: scale(.5);
+    }
+}
